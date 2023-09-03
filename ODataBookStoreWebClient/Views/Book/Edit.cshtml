@@ -1,0 +1,43 @@
+﻿@model ODataBookStoreWebClient.Models.Book
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Id">Id</label>
+        <input type="text" class="form-control" asp-for="Id" value="@Model.Id" readonly>
+    </div>
+    <div class="form-group">
+        <label asp-for="ISBN">ISBN</label>
+        <input type="text" class="form-control" asp-for="ISBN" placeholder="Enter ISBN" value="@Model.ISBN">
+    </div>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input type="text" class="form-control" asp-for="Title" placeholder="Enter Title" value="@Model.Title">
+    </div>
+    <div class="form-group">
+        <label asp-for="Author">Author</label>
+        <input type="text" class="form-control" asp-for="Author" placeholder="Enter Author" value="@Model.Author">
+    </div>
+        <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input type="number" class="form-control" asp-for="Price" step="any" min="0" value="@Model.Price"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location.City">City</label>
+        <input type="text" class="form-control" asp-for="Location.City" value="@Model.Location.City" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location.Street">Street</label>
+        <input type="text" class="form-control" asp-for="Location.Street" value="@Model.Location.Street" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update Data" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+<div>
+    <a asp-action="Index"><button class="btn btn-close"></button></a>
+</div>

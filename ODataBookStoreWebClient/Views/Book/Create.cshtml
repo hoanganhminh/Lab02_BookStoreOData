@@ -1,0 +1,40 @@
+﻿@model ODataBookStoreWebClient.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="ISBN">ISBN</label>
+        <input type="text" class="form-control" asp-for="ISBN" placeholder="Enter ISBN">
+    </div>
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input type="text" class="form-control" asp-for="Title" placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+        <label asp-for="Author">Author</label>
+        <input type="text" class="form-control" asp-for="Author" placeholder="Enter Author">
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Price</label>
+        <input type="number" class="form-control" asp-for="Price" step="any" min="0" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location.City">City</label>
+        <input type="text" class="form-control" asp-for="Location.City" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location.Street">Street</label>
+        <input type="text" class="form-control" asp-for="Location.Street" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+<div>
+    <a asp-action="Index"><button class="btn btn-close"></button></a>
+</div>
+
